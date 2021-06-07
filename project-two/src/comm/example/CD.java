@@ -25,6 +25,8 @@ public class CD {
     }
 //three arguments constructor
     public CD(int cdId, String cdName, double cdPrice) {
+
+        //validation check
         this.cdId = cdId;
         this.cdName = cdName;
         this.cdPrice = cdPrice;
@@ -34,5 +36,27 @@ public class CD {
     public String getDetails()
     {
         return "CD ID: "+cdId+" CD Name: "+cdName+" CD Price: "+cdPrice;
+    }
+
+    public void createCD(int cdId,String cdName,double cdPrice)
+    {
+        this.cdPrice = cdPrice;
+        this.cdId=cdId;
+        this.cdName=cdName;
+
+    }
+    public void createCD(int cdId,String cdName)
+    {
+        this.cdPrice = cdPrice;
+        this.cdId=cdId;
+        this.cdName=cdName;
+
+    }
+    public void createCD(int cdId)
+    {
+        this.cdPrice = cdPrice;
+        this.cdId=cdId;
+        this.cdName=cdName;
+
     }
 }
