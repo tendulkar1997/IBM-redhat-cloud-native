@@ -6,8 +6,24 @@ public class Person {
     private   int personId;
     private String personName;
     private int personAge;
+    //compositions
+    private Address address=null;
 
-    public void createPerson(int id,String name,int age)
+    //default constructors
+    public Person()
+    {
+
+    }
+    //parameterized constructors
+    public Person(int personId,String personName,int personAge,Address address)
+    {
+        this.personId=personId;
+        this.personName=personName;
+        this.personAge=personAge;
+        this.address=address;
+    }
+
+   /* public void createPerson(int id,String name,int age)
     {
         if((id<0)||(age>100))
         {
@@ -21,11 +37,15 @@ public class Person {
 
         personId=id;
         personName=name;
-    }
+    }*/
 
     public String getDetails()
     {
-        return "Person ID: "+personId + " Person Name: "+personName+" Person Age: "+personAge;
+        if(this.address==null)
+        {
+            address=new Address("dummy address1","dummy address 2");
+        }
+        return "Person ID: "+personId + " Person Name: "+personName+" Person Age: "+personAge+"Address: "+this.address.getAddress();
     }
 
 }

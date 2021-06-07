@@ -4,11 +4,13 @@ public class Tester {
     public static void main(String args[])
     {
 
-        int a=10;
+
      //local variable, reference variable;
        Person person=null;
+       //default constructor getting called
        person=new Person();
-       person.createPerson(1,"Sachin",-90);
+       System.out.println(person.getDetails());
+       person=new Person(2,"Rahul",20,new Address("Chennai","India"));
        System.out.println(person.getDetails());
 
     }
