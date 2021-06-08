@@ -16,7 +16,7 @@ public class App {
 		System.out.println(app.calculateTax(employee));
 	}
 	
-	
+	//calculating tax
 	public double calculateTax(Employee employee)
 	{
 		double tax=0;
